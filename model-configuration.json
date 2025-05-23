@@ -1,0 +1,127 @@
+{
+  "model_version": "1.0.0",
+  "model_type": "LightGBM",
+  "feature_count": 289,
+  "prediction_horizon_minutes": 60,
+  "training_date": "2024-01-15",
+  "model_params": {
+    "n_estimators": 842,
+    "learning_rate": 0.00574,
+    "max_depth": 4,
+    "min_child_samples": 74,
+    "subsample": 0.67,
+    "colsample_bytree": 0.71,
+    "reg_alpha": 0.013,
+    "reg_lambda": 0.022,
+    "hypo_weight": 2.43,
+    "hyper_weight": 1.01
+  },
+  "performance_metrics": {
+    "rmse": 1.893,
+    "mae": 1.291,
+    "r2": 0.605,
+    "mae_hypoglycemia": 2.285,
+    "mae_normal_range": 1.067,
+    "mae_hyperglycemia": 1.880
+  },
+  "input_features": [
+    "bg-0-00", "bg-0-05", "bg-0-10", "bg-0-15", "bg-0-20", "bg-0-25", "bg-0-30", "bg-0-35", "bg-0-40", "bg-0-45", "bg-0-50", "bg-0-55",
+    "bg-1-00", "bg-1-05", "bg-1-10", "bg-1-15", "bg-1-20", "bg-1-25", "bg-1-30", "bg-1-35", "bg-1-40", "bg-1-45", "bg-1-50", "bg-1-55",
+    "bg-2-00", "bg-2-05", "bg-2-10", "bg-2-15", "bg-2-20", "bg-2-25", "bg-2-30", "bg-2-35", "bg-2-40", "bg-2-45", "bg-2-50", "bg-2-55",
+    "bg-3-00", "bg-3-05", "bg-3-10", "bg-3-15", "bg-3-20", "bg-3-25", "bg-3-30", "bg-3-35", "bg-3-40", "bg-3-45", "bg-3-50", "bg-3-55",
+    "bg-4-00", "bg-4-05", "bg-4-10", "bg-4-15", "bg-4-20", "bg-4-25", "bg-4-30", "bg-4-35", "bg-4-40", "bg-4-45", "bg-4-50", "bg-4-55",
+    "bg-5-00", "bg-5-05", "bg-5-10", "bg-5-15", "bg-5-20", "bg-5-25", "bg-5-30", "bg-5-35", "bg-5-40", "bg-5-45", "bg-5-50", "bg-5-55",
+    
+    "insulin-0-00", "insulin-0-05", "insulin-0-10", "insulin-0-15", "insulin-0-20", "insulin-0-25", "insulin-0-30", "insulin-0-35", "insulin-0-40", "insulin-0-45", "insulin-0-50", "insulin-0-55",
+    "insulin-1-00", "insulin-1-05", "insulin-1-10", "insulin-1-15", "insulin-1-20", "insulin-1-25", "insulin-1-30", "insulin-1-35", "insulin-1-40", "insulin-1-45", "insulin-1-50", "insulin-1-55",
+    "insulin-2-00", "insulin-2-05", "insulin-2-10", "insulin-2-15", "insulin-2-20", "insulin-2-25", "insulin-2-30", "insulin-2-35", "insulin-2-40", "insulin-2-45", "insulin-2-50", "insulin-2-55",
+    "insulin-3-00", "insulin-3-05", "insulin-3-10", "insulin-3-15", "insulin-3-20", "insulin-3-25", "insulin-3-30", "insulin-3-35", "insulin-3-40", "insulin-3-45", "insulin-3-50", "insulin-3-55",
+    "insulin-4-00", "insulin-4-05", "insulin-4-10", "insulin-4-15", "insulin-4-20", "insulin-4-25", "insulin-4-30", "insulin-4-35", "insulin-4-40", "insulin-4-45", "insulin-4-50", "insulin-4-55",
+    "insulin-5-00", "insulin-5-05", "insulin-5-10", "insulin-5-15", "insulin-5-20", "insulin-5-25", "insulin-5-30", "insulin-5-35", "insulin-5-40", "insulin-5-45", "insulin-5-50", "insulin-5-55",
+    
+    "carbs-0-00", "carbs-0-05", "carbs-0-10", "carbs-0-15", "carbs-0-20", "carbs-0-25", "carbs-0-30", "carbs-0-35", "carbs-0-40", "carbs-0-45", "carbs-0-50", "carbs-0-55",
+    "carbs-1-00", "carbs-1-05", "carbs-1-10", "carbs-1-15", "carbs-1-20", "carbs-1-25", "carbs-1-30", "carbs-1-35", "carbs-1-40", "carbs-1-45", "carbs-1-50", "carbs-1-55",
+    "carbs-2-00", "carbs-2-05", "carbs-2-10", "carbs-2-15", "carbs-2-20", "carbs-2-25", "carbs-2-30", "carbs-2-35", "carbs-2-40", "carbs-2-45", "carbs-2-50", "carbs-2-55",
+    "carbs-3-00", "carbs-3-05", "carbs-3-10", "carbs-3-15", "carbs-3-20", "carbs-3-25", "carbs-3-30", "carbs-3-35", "carbs-3-40", "carbs-3-45", "carbs-3-50", "carbs-3-55",
+    "carbs-4-00", "carbs-4-05", "carbs-4-10", "carbs-4-15", "carbs-4-20", "carbs-4-25", "carbs-4-30", "carbs-4-35", "carbs-4-40", "carbs-4-45", "carbs-4-50", "carbs-4-55",
+    "carbs-5-00", "carbs-5-05", "carbs-5-10", "carbs-5-15", "carbs-5-20", "carbs-5-25", "carbs-5-30", "carbs-5-35", "carbs-5-40", "carbs-5-45", "carbs-5-50", "carbs-5-55",
+    
+    "activity-0-00", "activity-0-05", "activity-0-10", "activity-0-15", "activity-0-20", "activity-0-25", "activity-0-30", "activity-0-35", "activity-0-40", "activity-0-45", "activity-0-50", "activity-0-55",
+    "activity-1-00", "activity-1-05", "activity-1-10", "activity-1-15", "activity-1-20", "activity-1-25", "activity-1-30", "activity-1-35", "activity-1-40", "activity-1-45", "activity-1-50", "activity-1-55",
+    "activity-2-00", "activity-2-05", "activity-2-10", "activity-2-15", "activity-2-20", "activity-2-25", "activity-2-30", "activity-2-35", "activity-2-40", "activity-2-45", "activity-2-50", "activity-2-55",
+    "activity-3-00", "activity-3-05", "activity-3-10", "activity-3-15", "activity-3-20", "activity-3-25", "activity-3-30", "activity-3-35", "activity-3-40", "activity-3-45", "activity-3-50", "activity-3-55",
+    "activity-4-00", "activity-4-05", "activity-4-10", "activity-4-15", "activity-4-20", "activity-4-25", "activity-4-30", "activity-4-35", "activity-4-40", "activity-4-45", "activity-4-50", "activity-4-55",
+    "activity-5-00", "activity-5-05", "activity-5-10", "activity-5-15", "activity-5-20", "activity-5-25", "activity-5-30", "activity-5-35", "activity-5-40", "activity-5-45", "activity-5-50", "activity-5-55",
+    
+    "glucose_rate",
+    "estimated_active_insulin",
+    "estimated_active_carbs", 
+    "insulin_carb_ratio",
+    "sin_hour",
+    "cos_hour",
+    "sin_minute",
+    "cos_minute"
+  ],
+  "feature_importance": {
+    "bg-0-05": 0.089,
+    "glucose_rate": 0.076,
+    "sin_hour": 0.054,
+    "cos_hour": 0.051,
+    "estimated_active_insulin": 0.048,
+    "estimated_active_carbs": 0.043,
+    "bg-0-00": 0.041,
+    "insulin_carb_ratio": 0.038,
+    "bg-0-10": 0.035,
+    "bg-1-00": 0.032
+  },
+  "data_preprocessing": {
+    "glucose_interpolation": {
+      "method": "linear",
+      "max_gap_minutes": 15
+    },
+    "glucose_rate_clipping": {
+      "min_value": -0.5,
+      "max_value": 0.5
+    },
+    "insulin_missing_fill": 0.0,
+    "carbs_missing_fill": 0.0,
+    "activity_missing_fill": "None"
+  },
+  "validation_ranges": {
+    "glucose_mmol_l": {
+      "min": 1.0,
+      "max": 30.0
+    },
+    "insulin_units": {
+      "min": 0.0,
+      "max": 50.0
+    },
+    "carbs_grams": {
+      "min": 0.0,
+      "max": 200.0
+    }
+  },
+  "glycemia_thresholds": {
+    "severe_hypoglycemia": 3.0,
+    "hypoglycemia": 3.9,
+    "target_range_min": 3.9,
+    "target_range_max": 10.0,
+    "hyperglycemia": 10.0,
+    "severe_hyperglycemia": 13.9
+  },
+  "confidence_calculation": {
+    "base_confidence": 0.7,
+    "history_bonus": 0.2,
+    "recent_data_bonus": 0.1,
+    "stability_bonus": 0.1
+  },
+  "created_by": "Glucose Prediction ML Pipeline",
+  "notes": "Trained on BrisT1D dataset with optimized hyperparameters and range-specific weights for improved hypoglycemia prediction",
+  "requirements": {
+    "min_flutter_version": "3.16.0",
+    "required_packages": [
+      "onnxruntime_flutter",
+      "tflite_flutter"
+    ]
+  }
+}
